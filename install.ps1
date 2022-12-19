@@ -39,7 +39,7 @@ if ($(pwsh --version)) {
     $PowerShellCommand = "pwsh"
 }
 
-$PowerShellArguments = "-File $FilePath -ToggleAppTheme:`$$ToggleAppTheme -ToggleSystemTheme:`$$ToggleSystemTheme"
+$PowerShellArguments = "-NoProfile -File $FilePath -ToggleAppTheme:`$$ToggleAppTheme -ToggleSystemTheme:`$$ToggleSystemTheme"
 
 $StartMenuFolderPath = Join-Path $env:APPDATA "Microsoft\Windows\Start Menu\Programs\$AppName"
 $StartMenuShortcutPath = Join-Path $StartMenuFolderPath "$AppName.lnk"
